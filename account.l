@@ -28,7 +28,8 @@
   auth
   smtpserver
   smtpport
-  lang)
+  lang
+  ssl)
 
 (defun account-data-directory (account)
   (merge-pathnames

@@ -38,7 +38,9 @@
     (let (stream)
       (long-operation
 	(setq stream (junk::imap4-open (account-server account)
-				       (account-port account)))
+				       (account-port account)
+				       nil
+				       :ssl (account-ssl account)))
 	(unless stream
 	  (kamailg-error "gmail-connect: imap4-open error."))
 	(unless (junk::imap4-login stream
