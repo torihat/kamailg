@@ -1,0 +1,99 @@
+;;; -*- Mode: Lisp; Package: EDITOR -*-
+;;;
+;;; This file is not part of xyzzy.
+;;;
+;$Id: config.l.sample 777 2007-12-21 18:39:28Z torihat $
+;
+; config.l sample
+;
+
+(in-package "kamailg")
+
+;;; -----------------------------------------------------------------
+;;; アカウント
+;;;
+;;; 設定をリストで指定
+;;;
+;;; -----------------------------------------------------------------
+;(setq *account-list*
+;   (list
+;      (make-account :email      "xyzzy@example.com"  ; メールアドレス
+;                    :name       "XYZZY Taro"         ; 名前
+;                    :username   "xyzzy@example.com"  ; ユーザー名
+;                    :password   "password"           ; パスワード
+;                    :server     "localhost"          ; IMAPサーバ
+;                    :port       993                  ; IMAPポート
+;                    :smtpserver "localhost"          ; SMTPサーバ
+;                    :smtpport   465                  ; SMTPポート
+;                    :lang       'en                  ; 言語設定('en/'ja)
+;       )))
+
+;;; -----------------------------------------------------------------
+;;; 配色設定
+;;; -----------------------------------------------------------------
+; summaryの配色設定
+;(setq *summary-attribute-mark*       (list :foreground  1))
+;(setq *summary-attribute-flag*       (list :foreground  9))
+;(setq *summary-attribute-status*     (list :foreground 13))
+;(setq *summary-attribute-multipart*  (list :foreground 12))
+;(setq *summary-attribute-date*       (list :foreground 10))
+;(setq *summary-attribute-from*       (list :foreground 11))
+;(setq *summary-attribute-title*      (list :foreground 14))
+;
+; messageの配色設定
+;(setq junk::*mail-view-attribute-header*
+;      (list
+;       (cons "date"     (cons (list :bold t :foreground 9)
+;                              (list :bold t :foreground 10)))
+;       (cons "from"     (cons (list :bold t :foreground 9)
+;                              (list :bold t :foreground 11)))
+;       (cons "to"       (cons (list :bold t :foreground 9)
+;                              (list :bold t :foreground 12)))
+;       (cons "cc"       (cons (list :bold t :foreground 9)
+;                              (list :bold t :foreground 13)))
+;       (cons "subject"  (cons (list :bold t :foreground 9)
+;                              (list :bold t :foreground 14)))
+;       (cons "reply-to" (cons (list :bold t :foreground 9)
+;                              (list :bold t :foreground 11)))
+;       ))
+;
+; messageの上記以外の配色
+;(setq junk::*mail-view-attribute-header-default*
+;      (cons (list :foreground 9)
+;            (list :foreground 15)))
+;
+; messageのパート表示部分
+;(setq junk::*mail-view-attribute-part*
+;      (list :foreground 1))
+;
+; draftの本文部分
+;(setq junk::*mail-draft-attribute-body* nil)
+;
+; messageの引用部分
+;(setq junk::*mail-view-attribute-quote*
+;      (list (list :foreground 9)
+;            (list :foreground 10)
+;            (list :foreground 11)
+;            (list :foreground 12)))
+
+;;; -----------------------------------------------------------------
+;;; 署名
+;;;
+;;; 署名文字列をリストで指定
+;;; -----------------------------------------------------------------
+;(setq junk::*mail-signature-list*
+;      (list
+;       (junk::make-mailsignature
+;        :email "xyzzy@example.com"
+;        :signature "--
+;XYZZY Taro
+;xyzzy@example.com
+;")
+;       ))
+
+;;; -----------------------------------------------------------------
+;;; 拡張設定
+;;; -----------------------------------------------------------------
+;;; HTMLメール表示拡張を使用する （要browserex）
+;(require "kamailg/mhtml")
+;(setq *mhtml-browser-height* 400) ; browserの高さ
