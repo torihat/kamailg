@@ -217,7 +217,8 @@
 				  :auth "LOGIN"
 				  :user (account-username *account-current*)
 				  :pass (account-password *account-current*)
-				  :msgid-add t)
+				  :msgid-add t
+				  :ssl (account-ssl *account-current*))
 	(if flag
 	    (junk::mail-draft-close t)
 	  (kamailg-error "draft-send: failed: ~S" return))))))
