@@ -18,15 +18,13 @@ KaMailGは[xyzzy](http://www.jsdlab.co.jp/~kamei/)上でIMAP経由で[Gmail](htt
 
 ## 動作環境
 
-* [xyzzy](http://www.jsdlab.co.jp/~kamei/)-0.2.2.235 以降
-* [junk-library](http://www7a.biglobe.ne.jp/~hat/xyzzy/dl.html#junk-library)/0.0.0.5 以降
+* [xyzzy](http://xyzzy-022.github.io/)-0.2.2.248 以降
+* [junk-library](http://www7a.biglobe.ne.jp/~hat/xyzzy/dl.html#junk-library)/0.0.0.6 以降
 * [browser.dll拡張版](http://www.osk.3web.ne.jp/~usitukai/) (option)
 * [browserex](http://ohkubo.s53.xrea.com/xyzzy/#browserex) (option)
 * [統合アーカイバ・プロジェクト](http://www.csdinc.co.jp/archiver/)の各種DLL (option)
 
 動作には、[Gmail](http://mail.google.com/)のアカウントが必要です。
-
-また、KaMailGは自力でSSL通信を行うことができませんので、[stunnel](http://www.stunnel.org/)等のSSLトンネルソフトが必要です。（[stunnelの設定例](#stunnel)）
 
 ## インストール
 
@@ -155,7 +153,7 @@ M-x kamailg-toggle
 	<tr><th rowspan=6>その他</th><td align="center"><strong>右クリック</strong></td><td>ポップアップメニューを表示</td></tr>
 	<tr><td align="center"><strong>[</strong></td><td>サーバーに接続</td></tr>
 	<tr><td align="center"><strong>]</strong></td><td>サーバー接続を終了</td></tr>
-	<tr><td align="center"><strong>F1</strong></td><td>readme.htmlを表示</td></tr>
+	<tr><td align="center"><strong>F1</strong></td><td>README.mdを表示</td></tr>
 	<tr><td align="center"><strong>q</strong></td><td>メッセージを閉じる/終了</td></tr>
 	<tr><td align="center"><strong>Q</strong></td><td>終了</td></tr>
 </table>
@@ -253,11 +251,7 @@ connect = smtp.gmail.com:465</pre>
 
 ## ChangeLog
 
-<dl>
-	<dt>2007/12/23: 0.0.0.1alpha</dt>
-	<dd>
-		<ul>
-			<li>初版。</li>
-		</ul>
-	</dd>
-</dl>
+* 2013/05/30: 0.0.0.2
+	* xyzzy-0.2.2.248 のSSLサポートを受けてSSL対応。
+* 2007/12/23: 0.0.0.1alpha
+	* 初版

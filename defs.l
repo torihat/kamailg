@@ -117,10 +117,8 @@
 
 (defun show-help ()
   (interactive)
-  (let ((path
-	 (merge-pathnames "site-lisp/kamailg/readme.html"
-			  (si:system-root))))
-    (shell-execute path t)))
+  (let ((url "https://github.com/torihat/kamailg"))
+    (shell-execute url t)))
 
 (defun show-startup-screen ()
   (set-buffer (get-buffer-create *buffer-temp*))
